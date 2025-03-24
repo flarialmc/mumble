@@ -4,6 +4,7 @@
 #include <windows.h>
 #include <string>
 #include <vector>
+#include <cmath>
 
 #pragma comment(lib, "Ws2_32.lib")
 
@@ -39,7 +40,7 @@ void initMumble() {
     }
 }
 
-void updateMumble(float x, float y, float z, const std::string& name, const std::string& context) {
+void updateMumble(float x, float y, float z, float yaw, float pitch, const std::string& name, const std::string& context) {
     if (!lm) return;
 
     if (lm->uiVersion != 2) {
@@ -49,6 +50,17 @@ void updateMumble(float x, float y, float z, const std::string& name, const std:
     }
     lm->uiTick++;
 
+    float radYaw = yaw * (3.1415926535f / 180.0f);
+    float radPitch = pitch * (3.1415926535f / 180.0f);
+
+    lm->fAvatarFront[0] = -cos(radPitch) * sin(radYaw);
+    lm->fAvatarFront[1] = -sin(radPitch);
+    lm->fAvatarFront[2] = cos(radPitch) * cos(radYaw);
+
+    lm->fAvatarTop[0] = 0.0f;
+    lm->fAvatarTop[1] = 1.0f;
+    lm->fAvatarTop[2] = 0.0f;
+
     lm->fAvatarPosition[0] = x;
     lm->fAvatarPosition[1] = y;
     lm->fAvatarPosition[2] = z;
@@ -56,6 +68,14 @@ void updateMumble(float x, float y, float z, const std::string& name, const std:
     lm->fCameraPosition[0] = x;
     lm->fCameraPosition[1] = y;
     lm->fCameraPosition[2] = z;
+
+    lm->fCameraFront[0] = -cos(radPitch) * sin(radYaw);
+    lm->fCameraFront[1] = -sin(radPitch);
+    lm->fCameraFront[2] = cos(radPitch) * cos(radYaw);
+
+    lm->fCameraTop[0] = 0.0f;
+    lm->fCameraTop[1] = 1.0f;
+    lm->fCameraTop[2] = 0.0f;
 
     int wideSize = MultiByteToWideChar(CP_UTF8, 0, name.c_str(), -1, nullptr, 0);
     if (wideSize > 0) {
@@ -85,14 +105,19 @@ int receiveAll(SOCKET sock, char* buffer, int size) {
 
 void handleClient(SOCKET clientSocket) {
     const uint32_t MAX_STRING_LEN = 1024;
-    float float1, float2, float3;
+    float float1, float2, float3, float4, float5;
     uint32_t len1, len2;
     std::vector<char> str1, str2;
 
     while (true) {
+        //Position
         receiveAll(clientSocket, (char*)&float1, sizeof(float1));
         receiveAll(clientSocket, (char*)&float2, sizeof(float2));
         receiveAll(clientSocket, (char*)&float3, sizeof(float3));
+
+        // rot & pitch
+        receiveAll(clientSocket, (char*)&float4, sizeof(float4));
+        receiveAll(clientSocket, (char*)&float5, sizeof(float5));
 
         receiveAll(clientSocket, (char*)&len1, sizeof(len1));
         if (len1 > MAX_STRING_LEN) {
@@ -114,7 +139,7 @@ void handleClient(SOCKET clientSocket) {
         receiveAll(clientSocket, str2.data(), len2);
         str2[len2] = '\0';
 
-        updateMumble(float1, float2, float3, str1.data(), str2.data());
+        updateMumble(float1, float2, float3, float4, float5, str1.data(), str2.data());
 
         char ack = 1;
         if (send(clientSocket, &ack, sizeof(ack), 0) == SOCKET_ERROR) {
