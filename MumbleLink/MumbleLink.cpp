@@ -50,10 +50,10 @@ void updateMumble(float x, float y, float z, float yaw, float pitch, const std::
     }
     lm->uiTick++;
 
-    float radYaw = yaw * (3.1415926535f / 180.0f);
+    float radYaw = (180 - yaw) * (3.1415926535f / 180.0f);
     float radPitch = pitch * (3.1415926535f / 180.0f);
 
-    lm->fAvatarFront[0] = -cos(radPitch) * sin(radYaw);
+    lm->fAvatarFront[0] = cos(radPitch) * sin(radYaw);
     lm->fAvatarFront[1] = -sin(radPitch);
     lm->fAvatarFront[2] = cos(radPitch) * cos(radYaw);
 
@@ -69,8 +69,8 @@ void updateMumble(float x, float y, float z, float yaw, float pitch, const std::
     lm->fCameraPosition[1] = y;
     lm->fCameraPosition[2] = z;
 
-    lm->fCameraFront[0] = -cos(radPitch) * sin(radYaw);
-    lm->fCameraFront[1] = -sin(radPitch);
+    lm->fCameraFront[0] = cos(radPitch) * sin(radYaw);
+    lm->fCameraFront[1] = sin(radPitch);
     lm->fCameraFront[2] = cos(radPitch) * cos(radYaw);
 
     lm->fCameraTop[0] = 0.0f;
