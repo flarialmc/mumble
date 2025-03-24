@@ -31,5 +31,8 @@ This guide explains how to set up positional audio in Minecraft (Bedrock) using 
  Click launch in Flarial Launcher then open the mod menu in-game, and enable the Mumble Link module.
  This should connect you and your friends to the server and you will now have positonal audio in game
 
+5. **Enable Link Plugin**
+ Go to Mumble -> Settings -> Plugins -> Link, enable this
+
 POSITIONAL AUDIO WILL NOT WORK IF YOU DON'T HAVE IT ENABLED IN SETTINGS!
 IT WILL NOT WORK IF YOU ARE NOT IN THE SAME SERVER!
