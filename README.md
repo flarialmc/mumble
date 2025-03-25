@@ -1,10 +1,10 @@
-# :microphone2: Positional Audio Setup Guide for Minecraft (Bedrock) with Mumble Link :video_game:
+# 🎙️ Proximity Chat for Minecraft: Bedrock Edition (FREE!) :video_game:
 
-This guide will help you set up positional audio in Minecraft (Bedrock) using a custom host application and Mumble Link. Follow these steps carefully to get everything running smoothly. :white_check_mark:
+This guide will help you set up Proximity Chat in Minecraft (Bedrock) using Flarial and Mumble Link. Follow these steps carefully to get everything running smoothly. :white_check_mark:
 
 ---
 
-## :gear: Prerequisites
+## ⚙️ Prerequisites
 
 Before you begin, ensure you have the following:
 
@@ -15,7 +15,7 @@ Before you begin, ensure you have the following:
 
 ---
 
-## :rocket: Step 1: Launch the Host Application
+## 🚀 Step 1: Launch the Host Application
 
 Run the custom host executable. If successful, you should see a message like:  
 ```sh
@@ -25,7 +25,7 @@ Server listening on port 5080...
 
 ---
 
-## :arrows_counterclockwise: Step 2: Enable Loopback Exemption
+## 🔄 Step 2: Enable Loopback Exemption
 
 Open Command Prompt as Administrator and run:
 ```sh
@@ -34,13 +34,13 @@ CheckNetIsolation.exe LoopbackExempt -a -n=Microsoft.MinecraftUWP_8wekyb3d8bbwe
 
 ---
 
-## :globe_with_meridians: Step 3: Create a Mumble Link Server
+## 🌐 Step 3: Create a Mumble Link Server
 
 You can set up a Mumble server using [GuildBit.com](https://guildbit.com). A detailed guide will be added soon. :pencil:
 
 ---
 
-## :control_knobs: Step 4: Enable Mumble Link Module in Minecraft
+## 🎛️ Step 4: Enable Mumble Link Module in Minecraft
 
 - Open the **Flarial Launcher** and click **Launch**. :arrow_forward:
 - In-game, open the **mod menu** and enable the **Mumble Link module**. :level_slider:
@@ -48,7 +48,7 @@ You can set up a Mumble server using [GuildBit.com](https://guildbit.com). A det
 
 ---
 
-## :electric_plug: Step 5: Enable Link Plugin in Mumble
+## 🔌 Step 5: Enable Link Plugin in Mumble
 
 - Open **Mumble**. :microphone:
 - Navigate to **Settings → Plugins**. :gear:
@@ -57,7 +57,7 @@ You can set up a Mumble server using [GuildBit.com](https://guildbit.com). A det
 
 ---
 
-## :headphones: Best Mumble Settings
+## 🎧 Best Mumble Settings
 
 To enhance your positional audio experience, adjust the following settings in Mumble:
 
@@ -74,7 +74,7 @@ By default, voices may sound too distant. Increase the **Maximum distance** to *
 
 ---
 
-## :warning: Important Notes
+## ⚠️ Important Notes
 
 :rotating_light: **Positional audio will NOT work if:**
 - The **Link Plugin** is not enabled in Mumble settings. :x:
