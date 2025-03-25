@@ -36,7 +36,7 @@ CheckNetIsolation.exe LoopbackExempt -a -n=Microsoft.MinecraftUWP_8wekyb3d8bbwe
 
 ## 🌐 Step 3: Create a Mumble Link Server
 
-You can set up a Mumble server using [GuildBit.com](https://guildbit.com). A detailed guide will be added soon. :pencil:
+You can set up a Mumble server using [GuildBit.com](https://guildbit.com). After creation, share the `Direct Link` provided with your friends. They need to open this through their browser. :pencil:
 
 ---
 
