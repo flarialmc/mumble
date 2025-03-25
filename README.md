@@ -17,7 +17,7 @@ Before you begin, ensure you have the following:
 
 ## 🚀 Step 1: Launch the Host Application
 
-Run the [custom host executable](https://github.com/flarialmc/mumble/releases/download/1.0.0/MumbleLink.exe). If successful, you should see a message like:  
+Run the [Flarial Mumble Link](https://github.com/flarialmc/mumble/releases/download/1.0.0/MumbleLink.exe). If successful, you should see a message like:  
 ```sh
 Server listening on port 5080...
 ```
