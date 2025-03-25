@@ -52,8 +52,10 @@ You can set up a Mumble server using [GuildBit.com](https://guildbit.com). A det
 
 - Open **Mumble**. :microphone:
 - Navigate to **Settings → Plugins**. :gear:
+- Enab;e **Link to Game and Transmit Position** :white_check_mark:
 - Enable the **Link Plugin**. :white_check_mark:
-![image](https://github.com/user-attachments/assets/19b95d09-8f5e-476c-b8d3-8c1c3d94b052)
+![image](https://github.com/user-attachments/assets/a71bc745-83a3-4069-bdc1-87fd9bef9e70)
+
 
 ---
 
