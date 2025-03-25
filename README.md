@@ -8,7 +8,7 @@ This guide will help you set up Proximity Chat in Minecraft (Bedrock) using Flar
 
 Before you begin, ensure you have the following:
 
-- **:desktop: Operating System:** Windows 10/11  
+- **🖥️ Operating System:** Windows 10/11  
 - **:video_game: Minecraft Edition:** Windows 10 (Bedrock)  
 - **:satellite: Host Application:** Ensure the host application is running. (Available in the release tab in the future.)  
 - **:speaking_head: Mumble:** Installed on your system  
