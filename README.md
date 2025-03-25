@@ -1,32 +1,31 @@
-# Proximity Chat for Bedrock (FREE!)
+# :microphone2: Positional Audio Setup Guide for Minecraft (Bedrock) with Mumble Link :video_game:
 
-This guide will help you set up positional audio in Minecraft (Bedrock) using a custom host application and Mumble Link. Follow these steps carefully to get everything running smoothly.
+This guide will help you set up positional audio in Minecraft (Bedrock) using a custom host application and Mumble Link. Follow these steps carefully to get everything running smoothly. :white_check_mark:
 
 ---
 
-## Prerequisites
+## :gear: Prerequisites
 
 Before you begin, ensure you have the following:
 
-- **Operating System:** Windows 10/11  
-- **Minecraft Edition:** Windows 10 (Bedrock)  
-- **Host Application:** Ensure the host application is running. (Available in the release tab in the future.)  
-- **Mumble:** Installed on your system  
+- **:desktop: Operating System:** Windows 10/11  
+- **:video_game: Minecraft Edition:** Windows 10 (Bedrock)  
+- **:satellite: Host Application:** Ensure the host application is running. (Available in the release tab in the future.)  
+- **:speaking_head: Mumble:** Installed on your system  
 
 ---
 
-## Step 1: Launch the Host Application
+## :rocket: Step 1: Launch the Host Application
 
-Run the Flarial Linker Application, from here. If successful, you should see a message like:  
+Run the custom host executable. If successful, you should see a message like:  
 ```sh
 Server listening on port 5080...
 ```
 ![image](https://github.com/user-attachments/assets/3467276b-246d-48a2-8686-1ac22fcbbbda)
 
-
 ---
 
-## Step 2: Enable Loopback Exemption
+## :arrows_counterclockwise: Step 2: Enable Loopback Exemption
 
 Open Command Prompt as Administrator and run:
 ```sh
@@ -35,36 +34,52 @@ CheckNetIsolation.exe LoopbackExempt -a -n=Microsoft.MinecraftUWP_8wekyb3d8bbwe
 
 ---
 
-## Step 3: Create a Mumble Link Server
+## :globe_with_meridians: Step 3: Create a Mumble Link Server
 
-You can set up a Mumble server using [GuildBit.com](https://guildbit.com). A detailed guide will be added soon.
-
----
-
-## Step 4: Enable Mumble Link Module in Minecraft
-
-- Open the **Flarial Launcher** and click **Launch**.
-- In-game, open the **mod menu** and enable the **Mumble Link module**.
-- This will connect you and your friends to the server, enabling positional audio.
+You can set up a Mumble server using [GuildBit.com](https://guildbit.com). A detailed guide will be added soon. :pencil:
 
 ---
 
-## Step 5: Enable Link Plugin in Mumble
+## :control_knobs: Step 4: Enable Mumble Link Module in Minecraft
 
-- Open **Mumble**.
-- Navigate to **Settings → Plugins**.
-- Enable the **Link Plugin**.
-- Click **Apply**.
+- Open the **Flarial Launcher** and click **Launch**. :arrow_forward:
+- In-game, open the **mod menu** and enable the **Mumble Link module**. :level_slider:
+- This will connect you and your friends to the server, enabling positional audio. :loud_sound:
+
+---
+
+## :electric_plug: Step 5: Enable Link Plugin in Mumble
+
+- Open **Mumble**. :microphone:
+- Navigate to **Settings → Plugins**. :gear:
+- Enable the **Link Plugin**. :white_check_mark:
 ![image](https://github.com/user-attachments/assets/19b95d09-8f5e-476c-b8d3-8c1c3d94b052)
 
+---
+
+## :headphones: Best Mumble Settings
+
+To enhance your positional audio experience, adjust the following settings in Mumble:
+
+### :one: Set Transmit Mode to Continuous :arrows_counterclockwise:
+Using **Continuous** transmission ensures your voice is always sent without delay. :hourglass_flowing_sand:
+![Transmit Mode](https://github.com/user-attachments/assets/e9fd58ae-985c-40f8-8a00-e293939e0ca0)
+
+### :two: Enable the "Headphones" Option :headphones:
+This improves spatial audio accuracy, making the experience more immersive. :earth_africa:
+
+### :three: Adjust Maximum Distance to 50 Metres :straight_ruler:
+By default, voices may sound too distant. Increase the **Maximum distance** to **50 metres** for a more natural audio experience. :loud_sound:
+![Maximum Distance](https://github.com/user-attachments/assets/b5503a5e-793f-4053-8929-ef0e98e6b953)
 
 ---
 
-## Important Notes
+## :warning: Important Notes
 
-🚨 **Positional audio will NOT work if:**
-- The **Link Plugin** is not enabled in Mumble settings.
-- You and your friends are not on the **same Minecraft server**.
+:rotating_light: **Positional audio will NOT work if:**
+- The **Link Plugin** is not enabled in Mumble settings. :x:
+- You and your friends are not on the **same Minecraft server**. :globe_with_meridians:
+- You don't have positional audio enabled in Mumble's Settings. :x:
 
-Once everything is correctly set up, enjoy immersive positional audio in Minecraft Bedrock Edition! 🎧
+Once everything is correctly set up, enjoy immersive positional audio in Minecraft Bedrock Edition! :video_game::headphones::fire:
 
