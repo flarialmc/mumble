@@ -27,9 +27,12 @@ struct LinkedMem {
 LinkedMem* lm = nullptr;
 
 void initMumble() {
+    
     HANDLE hMapObject = OpenFileMappingW(FILE_MAP_ALL_ACCESS, FALSE, L"MumbleLink");
     if (hMapObject == nullptr) {
-        std::cout << "Failed to open MumbleLink file mapping\n";
+        std::cout << "Failed to open MumbleLink file mapping\n"
+                  << "Are you sure you have Mumble opened with the proper settings?\n"
+                  << "For help visit: https://github.com/flarialmc/mumble" << std::endl;
         return;
     }
 
